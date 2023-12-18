@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import data from './/data.json';
 import './App.css';
+import LokasiTpsComponent from "./LokasiTpsConponent";
+import {useEffect, useState} from "react";
 
 function App() {
+  // const [data, setData] = useState([]);
+  //
+  // useEffect(() => {
+  //   // Fungsi untuk membaca file JSON
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('src/data.json'); // Gantilah dengan path sesuai dengan struktur proyek Anda
+  //       const jsonData = await response.json();
+  //       console.log(jsonData)
+  //       setData(jsonData); // Sesuaikan dengan struktur data JSON yang diinginkan
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+  //
+  //   // Panggil fungsi fetchData pada saat komponen dimuat
+  //   fetchData();
+  // }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <LokasiTpsComponent data={data} />
+      </div>
   );
 }
 
